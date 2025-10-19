@@ -3,14 +3,12 @@ import os, re, json, requests
 from pathlib import Path
 
 # ======================= 配置区（只改这里） =======================
-API_KEY = "sk-9YZtQPQHGlKOxgLFG8Ag4YlYHhRWUC7edpgv8FY8vkiZpJfU"              # 为了演示按你要求写在代码里；生产环境建议用环境变量
+API_KEY = os.environ["DMX_API_KEY"]              # 从环境变量读取 API Key
 MODEL   = "claude-sonnet-4-5-20250929"   # 用 /v1/models 查询你这把 key 可用的真实模型名
 INPUT_FILE  = "index.html"           # 要改进的源文件（不会被覆盖）
 OUTPUT_FILE = "index_refactored.html"# 生成的副本文件名
 TASK_PROMPT = (
-    "请作为资深前端工程师改进这个个人主页："
-    "1) 重构结构（语义化/可维护），2) 无障碍与响应式，3) 适度优化样式与交互，"
-    "4) 保留并增加功能，需要挂相关链接和信息的地方请说明，5) 避免引入重库。"
+    "请你不修改代码内容，只加入注释，提升代码的可读性和可维护性；"
 )
 # 希望模型只回一个代码块，便于直接落盘：
 OUTPUT_FORMAT_RULE = "只输出最终文件的完整内容，使用一个 Markdown 代码块（```），不要任何解释或多余文字。"

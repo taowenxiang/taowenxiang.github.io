@@ -1,29 +1,51 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- 字符编码声明 -->
     <meta charset="utf-8">
+    <!-- 视口设置，确保移动端正确显示 -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- SEO优化：页面描述 -->
     <meta name="description" content="Wenxiang's portfolio - AI, Audio ML, and Graph Neural Networks researcher and developer">
+    <!-- PWA支持：主题颜色 -->
     <meta name="theme-color" content="#0366d6">
+    <!-- 页面标题 -->
     <title>Wenxiang | Portfolio</title>
     <style>
+      /* ==================== CSS 自定义属性（变量） ==================== */
+      /* 定义全局设计令牌，便于主题管理和一致性维护 */
       :root {
+        /* 主色调 */
         --color-primary: #0366d6;
         --color-primary-hover: #0256c7;
+        
+        /* 文本颜色 */
         --color-text: #24292e;
         --color-text-muted: #586069;
+        
+        /* 背景颜色 */
         --color-bg: #ffffff;
         --color-bg-secondary: #f6f8fa;
+        
+        /* 边框颜色 */
         --color-border: #e1e4e8;
-        --spacing-xs: 0.5rem;
-        --spacing-sm: 1rem;
-        --spacing-md: 1.5rem;
-        --spacing-lg: 2.5rem;
+        
+        /* 间距系统 */
+        --spacing-xs: 0.5rem;   /* 8px */
+        --spacing-sm: 1rem;     /* 16px */
+        --spacing-md: 1.5rem;   /* 24px */
+        --spacing-lg: 2.5rem;   /* 40px */
+        
+        /* 布局约束 */
         --max-width: 800px;
+        
+        /* 视觉效果 */
         --border-radius: 6px;
         --transition: all 0.2s ease;
       }
 
+      /* ==================== 暗色模式支持 ==================== */
+      /* 根据用户系统偏好自动切换暗色主题 */
       @media (prefers-color-scheme: dark) {
         :root {
           --color-primary: #58a6ff;
@@ -36,11 +58,16 @@
         }
       }
 
+      /* ==================== 全局重置 ==================== */
+      /* 确保所有元素使用 border-box 盒模型 */
       * {
         box-sizing: border-box;
       }
 
+      /* ==================== 基础排版 ==================== */
+      /* 主体容器样式，包含响应式布局 */
       body {
+        /* 系统字体栈，优先使用用户操作系统的原生字体 */
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
         max-width: var(--max-width);
         margin: 0 auto;
@@ -50,23 +77,28 @@
         background-color: var(--color-bg);
       }
 
+      /* 平板及以上设备：增加左右内边距 */
       @media (min-width: 768px) {
         body {
           padding: var(--spacing-lg) var(--spacing-md);
         }
       }
 
+      /* ==================== 页头样式 ==================== */
       header {
         margin-bottom: var(--spacing-lg);
       }
 
+      /* 主标题：使用 clamp() 实现流式排版 */
       h1 {
         margin: 0 0 var(--spacing-xs) 0;
+        /* 响应式字体大小：最小1.75rem，理想5vw，最大2.5rem */
         font-size: clamp(1.75rem, 5vw, 2.5rem);
         font-weight: 700;
         line-height: 1.2;
       }
 
+      /* 二级标题：带下划线分隔 */
       h2 {
         margin-top: var(--spacing-lg);
         margin-bottom: var(--spacing-md);
@@ -76,12 +108,15 @@
         padding-bottom: var(--spacing-xs);
       }
 
+      /* 副标题样式 */
       .subtitle {
         color: var(--color-text-muted);
         font-size: 1.125rem;
         margin: 0;
       }
 
+      /* ==================== 标签系统 ==================== */
+      /* 技能标签容器：使用 Flexbox 实现自动换行 */
       .tag-list {
         display: flex;
         flex-wrap: wrap;
@@ -91,6 +126,7 @@
         padding: 0;
       }
 
+      /* 单个标签样式：圆角胶囊形状 */
       .tag {
         display: inline-block;
         padding: 0.25rem 0.75rem;
@@ -101,16 +137,20 @@
         color: var(--color-text);
       }
 
+      /* ==================== 内容区块 ==================== */
       section {
         margin-bottom: var(--spacing-lg);
       }
 
+      /* ==================== 项目列表 ==================== */
+      /* 项目列表容器 */
       .project-list {
         list-style: none;
         padding: 0;
         margin: 0;
       }
 
+      /* 单个项目卡片：带悬停效果 */
       .project-item {
         padding: var(--spacing-md);
         margin-bottom: var(--spacing-md);
@@ -120,45 +160,55 @@
         transition: var(--transition);
       }
 
+      /* 项目卡片悬停效果：高亮边框和阴影 */
       .project-item:hover {
         border-color: var(--color-primary);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       }
 
+      /* 项目标题 */
       .project-title {
         margin: 0 0 var(--spacing-xs) 0;
         font-size: 1.25rem;
         font-weight: 600;
       }
 
+      /* 项目描述文本 */
       .project-description {
         margin: 0 0 var(--spacing-sm) 0;
         color: var(--color-text-muted);
       }
 
+      /* 项目链接容器 */
       .project-links {
         display: flex;
         flex-wrap: wrap;
         gap: var(--spacing-sm);
       }
 
+      /* ==================== 链接样式 ==================== */
+      /* 全局链接样式 */
       a {
         color: var(--color-primary);
         text-decoration: none;
         transition: var(--transition);
       }
 
+      /* 链接悬停效果 */
       a:hover {
         color: var(--color-primary-hover);
         text-decoration: underline;
       }
 
+      /* 链接焦点样式：增强键盘导航可访问性 */
       a:focus {
         outline: 2px solid var(--color-primary);
         outline-offset: 2px;
         border-radius: 2px;
       }
 
+      /* ==================== 按钮组件 ==================== */
+      /* 按钮基础样式：带图标支持 */
       .btn {
         display: inline-flex;
         align-items: center;
@@ -173,11 +223,14 @@
         cursor: pointer;
       }
 
+      /* 按钮悬停效果 */
       .btn:hover {
         background-color: var(--color-bg-secondary);
         text-decoration: none;
       }
 
+      /* ==================== 联系方式列表 ==================== */
+      /* 联系方式容器 */
       .contact-list {
         list-style: none;
         padding: 0;
@@ -187,6 +240,7 @@
         gap: var(--spacing-sm);
       }
 
+      /* 单个联系方式项 */
       .contact-item {
         display: flex;
         align-items: center;
@@ -197,18 +251,22 @@
         border-radius: var(--border-radius);
       }
 
+      /* 联系方式标签 */
       .contact-label {
         font-weight: 600;
         min-width: 80px;
         color: var(--color-text-muted);
       }
 
+      /* ==================== 图标样式 ==================== */
+      /* SVG 图标统一尺寸 */
       .icon {
         width: 20px;
         height: 20px;
         fill: currentColor;
       }
 
+      /* ==================== 页脚 ==================== */
       footer {
         margin-top: var(--spacing-lg);
         padding-top: var(--spacing-md);
@@ -218,6 +276,8 @@
         font-size: 0.875rem;
       }
 
+      /* ==================== 无障碍辅助类 ==================== */
+      /* 屏幕阅读器专用文本：视觉隐藏但保留语义 */
       .sr-only {
         position: absolute;
         width: 1px;
@@ -230,6 +290,8 @@
         border-width: 0;
       }
 
+      /* ==================== 动画偏好设置 ==================== */
+      /* 尊重用户的减少动画偏好设置 */
       @media (prefers-reduced-motion: reduce) {
         *,
         *::before,
@@ -242,9 +304,13 @@
     </style>
   </head>
   <body>
+    <!-- ==================== 页头区域 ==================== -->
     <header>
+      <!-- 主标题 -->
       <h1>Hi, I'm Wenxiang</h1>
+      <!-- 专业领域副标题 -->
       <p class="subtitle">AI · Audio ML · GNN</p>
+      <!-- 技能标签列表 -->
       <ul class="tag-list" aria-label="Areas of expertise">
         <li class="tag">Artificial Intelligence</li>
         <li class="tag">Audio Machine Learning</li>
@@ -252,22 +318,31 @@
       </ul>
     </header>
 
+    <!-- ==================== 主内容区域 ==================== -->
     <main>
+      <!-- ==================== 项目展示区 ==================== -->
       <section aria-labelledby="projects-heading">
         <h2 id="projects-heading">Projects</h2>
         <ul class="project-list">
-          <!-- Example project structure - Replace with actual projects -->
+          <!-- 项目示例 1 -->
           <li class="project-item">
+            <!-- 项目标题 -->
             <h3 class="project-title">Project Title 1</h3>
+            <!-- 项目描述 -->
             <p class="project-description">Brief description of the project, technologies used, and key achievements. Explain the problem solved and impact.</p>
+            <!-- 项目相关链接 -->
             <div class="project-links">
+              <!-- GitHub 仓库链接 -->
               <a href="#" class="btn" aria-label="View Project Title 1 on GitHub">
+                <!-- GitHub 图标 SVG -->
                 <svg class="icon" aria-hidden="true" viewBox="0 0 16 16">
                   <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
                 </svg>
                 GitHub
               </a>
+              <!-- 在线演示链接 -->
               <a href="#" class="btn" aria-label="View live demo of Project Title 1">
+                <!-- 演示图标 SVG -->
                 <svg class="icon" aria-hidden="true" viewBox="0 0 16 16">
                   <path d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
                   <path d="M8 4c-.55 0-1 .45-1 1v3.59l2.71 2.7c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L9 7.76V5c0-.55-.45-1-1-1z"/>
@@ -276,18 +351,26 @@
               </a>
             </div>
           </li>
-          <!-- Add more project items here following the same structure -->
+          
+          <!-- 项目示例 2 -->
           <li class="project-item">
+            <!-- 项目标题 -->
             <h3 class="project-title">Project Title 2</h3>
+            <!-- 项目描述 -->
             <p class="project-description">Another project description highlighting your work in AI, Audio ML, or GNN domains.</p>
+            <!-- 项目相关链接 -->
             <div class="project-links">
+              <!-- GitHub 仓库链接 -->
               <a href="#" class="btn" aria-label="View Project Title 2 on GitHub">
+                <!-- GitHub 图标 SVG -->
                 <svg class="icon" aria-hidden="true" viewBox="0 0 16 16">
                   <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
                 </svg>
                 GitHub
               </a>
+              <!-- 论文链接 -->
               <a href="#" class="btn" aria-label="Read paper about Project Title 2">
+                <!-- 论文图标 SVG -->
                 <svg class="icon" aria-hidden="true" viewBox="0 0 16 16">
                   <path d="M4 1.5A1.5 1.5 0 015.5 0h5A1.5 1.5 0 0112 1.5v13a1.5 1.5 0 01-1.5 1.5h-5A1.5 1.5 0 014 14.5v-13zM5.5 1a.5.5 0 00-.5.5v13a.5.5 0 00.5.5h5a.5.5 0 00.5-.5v-13a.5.5 0 00-.5-.5h-5z"/>
                   <path d="M6 3h4v1H6V3zm0 2h4v1H6V5zm0 2h4v1H6V7z"/>
@@ -299,26 +382,30 @@
         </ul>
       </section>
 
+      <!-- ==================== 联系方式区 ==================== -->
       <section aria-labelledby="contact-heading">
         <h2 id="contact-heading">Contact</h2>
         <ul class="contact-list">
+          <!-- 邮箱联系方式 -->
           <li class="contact-item">
             <span class="contact-label">Email:</span>
             <a href="mailto:wtao565@connect.hkust-gz.edu.cn">wtao565@connect.hkust-gz.edu.cn</a>
           </li>
+          <!-- GitHub 联系方式 -->
           <li class="contact-item">
             <span class="contact-label">GitHub:</span>
             <a href="https://github.com/taowenxiang" target="_blank" rel="noopener noreferrer">
               @taowenxiang
+              <!-- 屏幕阅读器提示：新标签页打开 -->
               <span class="sr-only">(opens in new tab)</span>
             </a>
           </li>
-          <!-- Add more contact methods as needed -->
+          <!-- LinkedIn 联系方式（待填充实际链接） -->
           <li class="contact-item">
             <span class="contact-label">LinkedIn:</span>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <!-- Replace # with actual LinkedIn profile URL -->
               Your LinkedIn Profile
+              <!-- 屏幕阅读器提示：新标签页打开 -->
               <span class="sr-only">(opens in new tab)</span>
             </a>
           </li>
@@ -326,22 +413,30 @@
       </section>
     </main>
 
+    <!-- ==================== 页脚 ==================== -->
     <footer>
+      <!-- 版权声明，年份通过 JavaScript 动态更新 -->
       <p>&copy; <span id="current-year"></span> Wenxiang. All rights reserved.</p>
     </footer>
 
+    <!-- ==================== JavaScript 交互逻辑 ==================== -->
     <script>
-      // Set current year
+      // ==================== 动态年份更新 ====================
+      // 自动更新版权年份为当前年份
       document.getElementById('current-year').textContent = new Date().getFullYear();
 
-      // Smooth scroll for anchor links
+      // ==================== 平滑滚动功能 ====================
+      // 为所有锚点链接添加平滑滚动效果
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+          // 获取链接的 href 属性
           const href = this.getAttribute('href');
+          // 仅处理有效的锚点链接（非空且非单独的 #）
           if (href !== '#' && href !== '') {
-            e.preventDefault();
-            const target = document.querySelector(href);
+            e.preventDefault(); // 阻止默认跳转行为
+            const target = document.querySelector(href); // 查找目标元素
             if (target) {
+              // 平滑滚动到目标元素
               target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
