@@ -298,18 +298,7 @@ const App = () => {
         className="fixed top-0 w-full z-50 backdrop-blur-xl border-b border-white/5"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
-          <div className="flex justify-between items-center">
-            <motion.a
-              href="#about"
-              className="text-xl font-bold tracking-tight"
-              whileHover={{ scale: 1.05 }}
-              onMouseEnter={() => setIsHovering(true)}
-              onMouseLeave={() => setIsHovering(false)}
-            >
-              <span className="gradient-text">GG</span>
-              <span className="text-zinc-500 font-light ml-1">.</span>
-            </motion.a>
-
+          <div className="flex justify-end items-center">
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-1">
               {navItems.map((item) => (
