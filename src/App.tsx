@@ -64,7 +64,12 @@ const App = () => {
   const { scrollYProgress } = useScroll();
   const navBg = useTransform(scrollYProgress, [0, 0.05], ['rgba(10,10,15,0)', 'rgba(10,10,15,0.9)']);
 
-  const phrases = ['AI Engineering Student', 'Research Intern', 'Full Stack Developer', '3D Developer', 'Music Producer'];
+  const phrases = [
+    'AI Engineering Undergraduate',
+    'HCI & Learning Research',
+    'Research Intern',
+    'Full Stack Developer',
+  ];
   const [phraseIndex, setPhraseIndex] = useState(0);
 
   useEffect(() => {
@@ -393,7 +398,7 @@ const App = () => {
             <div className="absolute -inset-[3px] bg-gradient-to-br from-violet-500 to-pink-500 rounded-full" />
             <img
               src="/profile.jpg"
-              alt="Ghanibhuti Gogoi"
+              alt="Wenxiang TAO"
               className="w-full h-full rounded-full object-cover relative z-10 border-[3px] border-[#0a0a0f]"
             />
           </motion.div>
@@ -405,9 +410,9 @@ const App = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4 sm:mb-6"
           >
-            <span className="text-white">Ghanibhuti</span>
+            <span className="text-white">Wenxiang</span>
             <br />
-            <span className="gradient-text">Gogoi</span>
+            <span className="gradient-text">TAO</span>
           </motion.h1>
 
           {/* Typing effect */}
@@ -428,9 +433,10 @@ const App = () => {
             transition={{ delay: 1, duration: 0.6 }}
             className="text-zinc-400 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed text-base sm:text-lg px-2"
           >
-            Passionate about <span className="text-violet-400 font-medium">artificial intelligence</span>,{' '}
-            <span className="text-pink-400 font-medium">3D development</span>, and creating innovative solutions.
-            Currently pursuing B.Eng. in AI at <span className="text-blue-400 font-medium">HKUST-GZ</span>.
+            AI Engineering undergraduate and research interested in designing{' '}
+            <span className="text-violet-400 font-medium">AI-enabled HCI systems</span>, especially in{' '}
+            <span className="text-pink-400 font-medium">educational settings</span> and student learning-life contexts.
+            Currently at <span className="text-blue-400 font-medium">HKUST-GZ</span>.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -927,9 +933,9 @@ const App = () => {
       {/* ==================== FOOTER ==================== */}
       <footer className="py-8 sm:py-10 px-4 sm:px-6 border-t border-white/5">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-zinc-600 text-xs sm:text-sm">&copy; 2025 Ghanibhuti Gogoi. All rights reserved.</p>
+          <p className="text-zinc-600 text-xs sm:text-sm">&copy; 2025 Wenxiang TAO. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a href="https://github.com" className="text-zinc-600 hover:text-violet-400 transition-colors" aria-label="GitHub">
+            <a href="https://github.com/taowenxiang" className="text-zinc-600 hover:text-violet-400 transition-colors" aria-label="GitHub">
               <Github size={18} />
             </a>
             <a href="https://www.linkedin.com/in/ghanibhuti-gogoi-365820229/" className="text-zinc-600 hover:text-violet-400 transition-colors" aria-label="LinkedIn">

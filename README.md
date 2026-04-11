@@ -1,6 +1,6 @@
-# Ghanibhuti Gogoi - Portfolio Website
+# Wenxiang TAO — Portfolio Website
 
-A modern, responsive portfolio website showcasing Ghanibhuti Gogoi's education, experience, projects, and skills. Built with React, TypeScript, and Tailwind CSS.
+A modern, responsive portfolio website showcasing education, experience, projects, and skills. Built with React, TypeScript, and Tailwind CSS.
 
 ## 🌟 Features
 
@@ -12,7 +12,7 @@ A modern, responsive portfolio website showcasing Ghanibhuti Gogoi's education, 
 
 ## 🚀 Live Demo
 
-Visit the live website: [https://GhanibhutiGogoi.github.io/](https://GhanibhutiGogoi.github.io/)
+Visit the live website: [https://taowenxiang.github.io/](https://taowenxiang.github.io/)
 
 ## 🛠️ Tech Stack
 
@@ -26,17 +26,20 @@ Visit the live website: [https://GhanibhutiGogoi.github.io/](https://GhanibhutiG
 ## 📦 Installation
 
 1. Clone the repository:
+
 ```bash
-git clone https://github.com/GhanibhutiGogoi/GhanibhutiGogoi.github.io.git
-cd GhanibhutiGogoi.github.io
+git clone https://github.com/taowenxiang/taowenxiang.github.io.git
+cd taowenxiang.github.io
 ```
 
 2. Install dependencies:
+
 ```bash
 bun install
 ```
 
 3. Start the development server:
+
 ```bash
 bun run dev
 ```
@@ -56,37 +59,30 @@ bun run dev
 
 This repository is configured with GitHub Actions for automatic deployment. Simply:
 
-1. Fork this repository
-2. Update the `base` path in `vite.config.ts` to match your repository name
+1. Fork this repository (or use your own copy)
+2. Update the `base` path in `vite.config.ts` if your site is not served from the repository root
 3. Enable GitHub Pages in your repository settings:
    - Go to Settings → Pages
    - Select "GitHub Actions" as the source
 4. Push changes to the `main` branch
 
-The site will automatically deploy to `https://GhanibhutiGogoi.github.io/`
+The site will automatically deploy to `https://taowenxiang.github.io/`
 
 ### Manual Deployment
 
 1. Build the project:
+
 ```bash
 bun run build
 ```
 
-2. Deploy the `dist` folder to GitHub Pages using your preferred method.
+2. Deploy the build output folder to GitHub Pages using your preferred method (see `vite.config.ts` for `outDir`; the project may use `build` or `dist` depending on configuration).
 
 ## 🎨 Customization
 
 ### Personal Information
 
-Update the following sections in `src/App.tsx`:
-
-- **Name and Title**: Update the hero section
-- **Contact Information**: Update email and social links
-- **Education**: Modify education details
-- **Experience**: Update work experience
-- **Projects**: Showcase your projects
-- **Skills**: List your technical and personal skills
-- **Achievements**: Add your accomplishments
+Update content in `src/App.tsx` (hero, sections, contact links) and meta tags in `index.html`.
 
 ### Styling
 
@@ -129,8 +125,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 📞 Contact
 
-- **Email**: ghanibhutigogoi@gmail.com
-- **LinkedIn**: [Ghanibhuti Gogoi](https://www.linkedin.com/in/ghanibhuti-gogoi-365820229/)
-- **Location**: Guangzhou, Guangdong, China
+Update email, LinkedIn, phone, and social URLs in `src/App.tsx` (hero, contact section, and footer) to match your own profiles.
 
 ---
