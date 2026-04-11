@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform, useInView, AnimatePresence } from 'framer-motion';
-import { Mail, MapPin, Linkedin, Github, ExternalLink, Award, Code, GraduationCap, Briefcase, Lightbulb, Instagram, Menu, Phone, Globe, Cpu, Gamepad2, Brain, Heart, Music, ChevronDown, FileText, ArrowUpRight, X } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Github, ExternalLink, Award, Code, GraduationCap, Briefcase, Lightbulb, Menu, Globe, Cpu, Gamepad2, Brain, Heart, Music, ChevronDown, FileText, ArrowUpRight, X } from 'lucide-react';
 
 const SectionHeading = ({ children, icon: Icon }: { children: string; icon: React.ElementType }) => {
   const ref = useRef(null);
@@ -447,7 +447,7 @@ const App = () => {
             className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 px-4 sm:px-0"
           >
             <a
-              href="mailto:ghanibhutigogoi@gmail.com"
+              href="mailto:wtao565connect@gmail.com"
               className="magnetic-btn flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-violet-600 to-pink-600 text-white rounded-full font-medium hover:shadow-lg hover:shadow-violet-500/25 transition-all hover:-translate-y-1"
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
@@ -456,22 +456,15 @@ const App = () => {
               Get in Touch
             </a>
             <a
-              href="https://www.linkedin.com/in/ghanibhuti-gogoi-365820229/"
+              href="https://www.linkedin.com/in/wenxiang-tao-0356b5402/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="magnetic-btn flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-white/5 border border-white/10 text-white rounded-full font-medium hover:bg-white/10 transition-all hover:-translate-y-1"
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
             >
               <Linkedin size={18} />
               LinkedIn
-            </a>
-            <a
-              href="tel:+918486941868"
-              className="magnetic-btn flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-white/5 border border-white/10 text-white rounded-full font-medium hover:bg-white/10 transition-all hover:-translate-y-1"
-              onMouseEnter={() => setIsHovering(true)}
-              onMouseLeave={() => setIsHovering(false)}
-            >
-              <Phone size={18} />
-              +91 84869 41868
             </a>
           </motion.div>
 
@@ -881,30 +874,31 @@ const App = () => {
               I'm always interested in discussing new opportunities, collaborations, or just having a chat about AI and technology.
             </p>
 
-            <div className="grid grid-cols-2 sm:flex sm:flex-row sm:justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 px-2 sm:px-0">
-              {[
-                { href: 'mailto:ghanibhutigogoi@gmail.com', icon: Mail, label: 'Email Me', primary: true },
-                { href: 'https://www.linkedin.com/in/ghanibhuti-gogoi-365820229/', icon: Linkedin, label: 'LinkedIn' },
-                { href: 'https://www.instagram.com/ghanibhuti_gogoi/', icon: Instagram, label: 'Instagram' },
-                { href: 'https://wa.me/918486941868', icon: Phone, label: 'WhatsApp' }
-              ].map((link) => (
-                <motion.a
-                  key={link.label}
-                  href={link.href}
-                  whileHover={{ y: -4 }}
-                  whileTap={{ scale: 0.97 }}
-                  className={`magnetic-btn flex items-center justify-center gap-2 px-4 sm:px-8 py-3 sm:py-4 rounded-full font-medium transition-all text-sm sm:text-base ${
-                    link.primary
-                      ? 'bg-gradient-to-r from-violet-600 to-pink-600 text-white hover:shadow-lg hover:shadow-violet-500/25 col-span-2 sm:col-span-1'
-                      : 'bg-white/5 border border-white/10 text-zinc-300 hover:bg-white/10 hover:text-white'
-                  }`}
-                  onMouseEnter={() => setIsHovering(true)}
-                  onMouseLeave={() => setIsHovering(false)}
-                >
-                  <link.icon size={16} className="sm:w-[18px] sm:h-[18px]" />
-                  {link.label}
-                </motion.a>
-              ))}
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 px-2 sm:px-0">
+              <motion.a
+                href="mailto:wtao565connect@gmail.com"
+                whileHover={{ y: -4 }}
+                whileTap={{ scale: 0.97 }}
+                className="magnetic-btn flex items-center justify-center gap-2 px-4 sm:px-8 py-3 sm:py-4 rounded-full font-medium transition-all text-sm sm:text-base bg-gradient-to-r from-violet-600 to-pink-600 text-white hover:shadow-lg hover:shadow-violet-500/25"
+                onMouseEnter={() => setIsHovering(true)}
+                onMouseLeave={() => setIsHovering(false)}
+              >
+                <Mail size={16} className="sm:w-[18px] sm:h-[18px]" />
+                Email Me
+              </motion.a>
+              <motion.a
+                href="https://www.linkedin.com/in/wenxiang-tao-0356b5402/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ y: -4 }}
+                whileTap={{ scale: 0.97 }}
+                className="magnetic-btn flex items-center justify-center gap-2 px-4 sm:px-8 py-3 sm:py-4 rounded-full font-medium transition-all text-sm sm:text-base bg-white/5 border border-white/10 text-zinc-300 hover:bg-white/10 hover:text-white"
+                onMouseEnter={() => setIsHovering(true)}
+                onMouseLeave={() => setIsHovering(false)}
+              >
+                <Linkedin size={16} className="sm:w-[18px] sm:h-[18px]" />
+                LinkedIn
+              </motion.a>
             </div>
 
             {/* CV Download */}
@@ -938,10 +932,16 @@ const App = () => {
             <a href="https://github.com/taowenxiang" className="text-zinc-600 hover:text-violet-400 transition-colors" aria-label="GitHub">
               <Github size={18} />
             </a>
-            <a href="https://www.linkedin.com/in/ghanibhuti-gogoi-365820229/" className="text-zinc-600 hover:text-violet-400 transition-colors" aria-label="LinkedIn">
+            <a
+              href="https://www.linkedin.com/in/wenxiang-tao-0356b5402/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-600 hover:text-violet-400 transition-colors"
+              aria-label="LinkedIn"
+            >
               <Linkedin size={18} />
             </a>
-            <a href="mailto:ghanibhutigogoi@gmail.com" className="text-zinc-600 hover:text-violet-400 transition-colors" aria-label="Email">
+            <a href="mailto:wtao565connect@gmail.com" className="text-zinc-600 hover:text-violet-400 transition-colors" aria-label="Email">
               <Mail size={18} />
             </a>
           </div>

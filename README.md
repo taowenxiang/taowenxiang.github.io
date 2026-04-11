@@ -125,6 +125,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 📞 Contact
 
-Update email, LinkedIn, phone, and social URLs in `src/App.tsx` (hero, contact section, and footer) to match your own profiles.
+Site contact links are configured in `src/App.tsx` (hero, contact section, footer).
 
 ---
