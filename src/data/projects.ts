@@ -1,0 +1,61 @@
+import { Code, Globe, Cpu, Gamepad2, Music } from 'lucide-react';
+
+export const projects = [
+  {
+    title: 'Musician-Llama',
+    desc: 'Fine-tuned the Llama-3.2-1B-Instruct Large Language Model to generate MIDI music files. Published the model and dataset on Hugging Face.',
+    tags: ['GenAI', 'LLM', 'HuggingFace'],
+    link: 'https://huggingface.co/Ghanibhuti/Musician-Llama-3.2-1B-Instruct',
+    icon: Code,
+    gradient: 'from-violet-600/10 to-purple-600/10',
+    border: 'hover:border-violet-500/30',
+  },
+  {
+    title: '3D Campus Power Analysis',
+    desc: 'Designed and developed a full 3D interactive model of the entire campus using Unity3D. Built and integrated a custom API to connect with real-time data.',
+    tags: ['Unity3D', 'API', 'Data Viz'],
+    icon: Globe,
+    gradient: 'from-emerald-600/10 to-teal-600/10',
+    border: 'hover:border-emerald-500/30',
+  },
+  {
+    title: 'Underwater Robot Project',
+    desc: 'Developed a 3D visualization and control interface for an underwater cleaning robot. Built a real-time data-driven system.',
+    tags: ['Robotics', '3D Viz', 'Backend'],
+    icon: Cpu,
+    gradient: 'from-blue-600/10 to-indigo-600/10',
+    border: 'hover:border-blue-500/30',
+  },
+  {
+    title: 'Tanoxi Technology',
+    desc: 'Developed a comprehensive commercial website with product views, orders, and Admin Panel for managing products, orders, and team info.',
+    tags: ['Full Stack', 'React', 'Admin Panel'],
+    icon: Globe,
+    gradient: 'from-pink-600/10 to-rose-600/10',
+    border: 'hover:border-pink-500/30',
+  },
+  {
+    title: 'Smart Pump AR App',
+    desc: 'Smart pump visualization with interactive 360 front-end driven by real-time sensor data. Custom camera drivers for lightweight hardware.',
+    tags: ['AR', 'IoT', 'Raspberry Pi'],
+    icon: Cpu,
+    gradient: 'from-cyan-600/10 to-teal-600/10',
+    border: 'hover:border-cyan-500/30',
+  },
+  {
+    title: 'Game Development',
+    desc: 'Developed and published a game called Pokemon Gen on Gamejolt. Indie developer - coding, 3D modeling, animation, game design.',
+    tags: ['Game Dev', '3D Modeling', 'Animation'],
+    icon: Gamepad2,
+    gradient: 'from-amber-600/10 to-orange-600/10',
+    border: 'hover:border-amber-500/30',
+  },
+  {
+    title: 'Music Production',
+    desc: 'Published music under the artist name "Ghanibhuti Gogoi", available on all platforms. Production, lyrics, vocals, mix & mastering.',
+    tags: ['Production', 'Vocals', 'Mixing'],
+    icon: Music,
+    gradient: 'from-fuchsia-600/10 to-pink-600/10',
+    border: 'hover:border-fuchsia-500/30',
+  },
+];
