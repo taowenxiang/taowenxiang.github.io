@@ -7,8 +7,8 @@
     "dev": "vite --host 0.0.0.0",
     "generate-favicon": "node scripts/generate-favicon.mjs",
     "build": "tsc -b && node scripts/generate-favicon.mjs && vite build --outDir dist",
-    "lint": "bunx biome lint --write && bunx tsc --noEmit",
-    "format": "bunx biome format --write",
+    "lint": "npx biome lint --write && npx tsc --noEmit",
+    "format": "npx biome format --write",
     "preview": "vite preview"
   },
   "dependencies": {

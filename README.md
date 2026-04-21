@@ -21,7 +21,7 @@ Visit the live website: [https://taowenxiang.github.io/](https://taowenxiang.git
 - **Icons**: Lucide React
 - **Build Tool**: Vite
 - **Deployment**: GitHub Pages
-- **Package Manager**: Bun
+- **Package Manager**: npm
 
 ## 📦 Installation
 
@@ -35,23 +35,24 @@ cd taowenxiang.github.io
 2. Install dependencies:
 
 ```bash
-bun install
+npm install
 ```
 
 3. Start the development server:
 
 ```bash
-bun run dev
+npm run dev
 ```
 
 4. Open your browser and visit `http://localhost:5173`
 
 ## 📚 Available Scripts
 
-- `bun run dev` - Start development server
-- `bun run build` - Build for production
-- `bun run preview` - Preview production build locally
-- `bun run lint` - Run linter
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run linter
+- `npm run format` - Format with Biome
 
 ## 🌐 Deploying to GitHub Pages
 
@@ -73,10 +74,10 @@ The site will automatically deploy to `https://taowenxiang.github.io/`
 1. Build the project:
 
 ```bash
-bun run build
+npm run build
 ```
 
-2. Deploy the build output folder to GitHub Pages using your preferred method (see `vite.config.ts` for `outDir`; the project may use `build` or `dist` depending on configuration).
+2. Deploy the `dist` folder to GitHub Pages using your preferred method (the build script outputs to `dist`).
 
 ## 🎨 Customization
 
