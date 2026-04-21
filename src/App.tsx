@@ -19,52 +19,55 @@ const phrases = [
   'Full Stack Developer',
 ];
 
+/** 每个短语完整显示后停留多久再开始删除（毫秒） */
+const PAUSE_AFTER_FULL_MS = 1800;
+const TYPE_CHAR_MS = 80;
+const DELETE_CHAR_MS = 40;
+
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('about');
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
   const [typedText, setTypedText] = useState('');
   const [phraseIndex, setPhraseIndex] = useState(0);
 
   const { scrollYProgress } = useScroll();
 
-  // Typing effect
+  // Typing effect：打满 → 停顿 → 删除 → 下一句
   useEffect(() => {
-    let charIndex = 0;
-    let deleting = false;
+    let cancelled = false;
     const currentPhrase = phrases[phraseIndex];
 
-    const interval = setInterval(() => {
-      if (!deleting) {
-        setTypedText(currentPhrase.slice(0, charIndex + 1));
-        charIndex++;
-        if (charIndex === currentPhrase.length) deleting = true;
-      } else {
-        setTypedText(currentPhrase.slice(0, charIndex - 1));
-        charIndex--;
-        if (charIndex === 0) {
-          deleting = false;
-          setPhraseIndex((prev) => (prev + 1) % phrases.length);
-          clearInterval(interval);
-        }
+    const delay = (ms: number) =>
+      new Promise<void>((resolve) => {
+        setTimeout(() => resolve(), ms);
+      });
+
+    const run = async () => {
+      for (let i = 1; i <= currentPhrase.length; i++) {
+        if (cancelled) return;
+        await delay(TYPE_CHAR_MS);
+        if (cancelled) return;
+        setTypedText(currentPhrase.slice(0, i));
       }
-    }, deleting ? 40 : 80);
-
-    return () => clearInterval(interval);
-  }, [phraseIndex]);
-
-  // Custom cursor (desktop only)
-  useEffect(() => {
-    const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
-    if (isTouchDevice) return;
-
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePos({ x: e.clientX - 10, y: e.clientY - 10 });
+      if (cancelled) return;
+      await delay(PAUSE_AFTER_FULL_MS);
+      if (cancelled) return;
+      for (let i = currentPhrase.length - 1; i >= 0; i--) {
+        if (cancelled) return;
+        await delay(DELETE_CHAR_MS);
+        if (cancelled) return;
+        setTypedText(currentPhrase.slice(0, i));
+      }
+      if (cancelled) return;
+      setPhraseIndex((prev) => (prev + 1) % phrases.length);
     };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
+
+    void run();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [phraseIndex]);
 
   // Active section tracking
   useEffect(() => {
@@ -89,15 +92,10 @@ const App = () => {
 
   return (
     <div className="min-h-screen relative grid-pattern overflow-x-hidden">
-      <div
-        className={`custom-cursor ${isHovering ? 'hovering' : ''}`}
-        style={{ left: mousePos.x, top: mousePos.y }}
-      />
-
       <div className="noise-overlay" />
 
       <motion.div
-        className="fixed top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-violet-500 via-pink-500 to-amber-500 z-[60] origin-left"
+        className="fixed top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-700 via-sky-500 to-cyan-400 z-[60] origin-left"
         style={{ scaleX: scrollYProgress }}
       />
 
@@ -105,30 +103,29 @@ const App = () => {
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
         activeSection={activeSection}
-        setIsHovering={setIsHovering}
       />
 
-      <Hero typedText={typedText} setIsHovering={setIsHovering} />
+      <Hero typedText={typedText} />
 
       <Education />
       <div className="section-divider" />
 
-      <Experience setIsHovering={setIsHovering} />
+      <Experience />
       <div className="section-divider" />
 
-      <Projects setIsHovering={setIsHovering} />
+      <Projects />
       <div className="section-divider" />
 
       <Skills />
       <div className="section-divider" />
 
-      <Achievements setIsHovering={setIsHovering} />
+      <Achievements />
       <div className="section-divider" />
 
       <Leadership />
       <div className="section-divider" />
 
-      <Contact setIsHovering={setIsHovering} />
+      <Contact />
 
       <Footer />
     </div>

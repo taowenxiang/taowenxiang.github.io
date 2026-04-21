@@ -4,7 +4,7 @@ import RevealCard from '../RevealCard';
 import ProjectCard from '../ProjectCard';
 import { projects } from '../../data/projects';
 
-const Projects = ({ setIsHovering }: { setIsHovering: (v: boolean) => void }) => {
+const Projects = () => {
   return (
     <section id="projects" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 relative">
       <div className="max-w-6xl mx-auto">
@@ -15,10 +15,10 @@ const Projects = ({ setIsHovering }: { setIsHovering: (v: boolean) => void }) =>
             <RevealCard key={i} delay={i * 0.08}>
               {project.link ? (
                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="block h-full">
-                  <ProjectCard project={project} setIsHovering={setIsHovering} />
+                  <ProjectCard project={project} />
                 </a>
               ) : (
-                <ProjectCard project={project} setIsHovering={setIsHovering} />
+                <ProjectCard project={project} />
               )}
             </RevealCard>
           ))}

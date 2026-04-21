@@ -10,17 +10,17 @@ const SectionHeading = ({ children, icon: Icon }: { children: string; icon: Reac
         initial={{ scale: 0, rotate: -180 }}
         animate={isInView ? { scale: 1, rotate: 0 } : {}}
         transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-        className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br from-violet-600/20 to-pink-600/20 border border-violet-500/20 flex items-center justify-center flex-shrink-0"
+        className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br from-blue-600/15 to-cyan-500/15 border border-blue-400/30 flex items-center justify-center flex-shrink-0"
       >
-        <Icon size={20} className="text-violet-400 sm:hidden" />
-        <Icon size={24} className="text-violet-400 hidden sm:block" />
+        <Icon size={20} className="text-blue-600 sm:hidden" />
+        <Icon size={24} className="text-blue-600 hidden sm:block" />
       </motion.div>
       <div className="min-w-0">
         <motion.h2
           initial={{ opacity: 0, x: -20 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-2xl sm:text-3xl md:text-4xl font-bold text-white truncate"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 truncate"
         >
           {children}
         </motion.h2>
@@ -28,7 +28,7 @@ const SectionHeading = ({ children, icon: Icon }: { children: string; icon: Reac
           initial={{ width: 0 }}
           animate={isInView ? { width: '100%' } : {}}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="h-[2px] mt-2 bg-gradient-to-r from-violet-500 to-transparent"
+          className="h-[2px] mt-2 bg-gradient-to-r from-blue-600 to-transparent"
         />
       </div>
     </motion.div>

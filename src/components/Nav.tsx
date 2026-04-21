@@ -7,17 +7,16 @@ type NavProps = {
   isMenuOpen: boolean;
   setIsMenuOpen: (v: boolean) => void;
   activeSection: string;
-  setIsHovering: (v: boolean) => void;
 };
 
-const Nav = ({ isMenuOpen, setIsMenuOpen, activeSection, setIsHovering }: NavProps) => {
+const Nav = ({ isMenuOpen, setIsMenuOpen, activeSection }: NavProps) => {
   const { scrollYProgress } = useScroll();
-  const navBg = useTransform(scrollYProgress, [0, 0.05], ['rgba(10,10,15,0)', 'rgba(10,10,15,0.9)']);
+  const navBg = useTransform(scrollYProgress, [0, 0.05], ['rgba(240,247,255,0)', 'rgba(240,247,255,0.92)']);
 
   return (
     <motion.nav
       style={{ backgroundColor: navBg }}
-      className="fixed top-0 w-full z-50 backdrop-blur-xl border-b border-white/5"
+      className="fixed top-0 w-full z-50 backdrop-blur-xl border-b border-blue-200/60"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex justify-end items-center">
@@ -27,10 +26,8 @@ const Nav = ({ isMenuOpen, setIsMenuOpen, activeSection, setIsHovering }: NavPro
                 key={item}
                 href={`#${item}`}
                 className={`nav-link px-3 lg:px-4 py-2 text-sm font-medium transition-colors capitalize ${
-                  activeSection === item ? 'text-violet-400 active' : 'text-zinc-400 hover:text-white'
+                  activeSection === item ? 'text-blue-600 active' : 'text-slate-600 hover:text-slate-900'
                 }`}
-                onMouseEnter={() => setIsHovering(true)}
-                onMouseLeave={() => setIsHovering(false)}
               >
                 {item}
               </a>
@@ -39,7 +36,7 @@ const Nav = ({ isMenuOpen, setIsMenuOpen, activeSection, setIsHovering }: NavPro
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-zinc-400 hover:text-white transition-colors"
+            className="md:hidden p-2 text-slate-600 hover:text-slate-900 transition-colors"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -55,7 +52,7 @@ const Nav = ({ isMenuOpen, setIsMenuOpen, activeSection, setIsHovering }: NavPro
               transition={{ duration: 0.3 }}
               className="md:hidden overflow-hidden"
             >
-              <div className="py-3 flex flex-col gap-1 border-t border-white/5 mt-3">
+              <div className="py-3 flex flex-col gap-1 border-t border-blue-200/60 mt-3">
                 {navItems.map((item) => (
                   <a
                     key={item}
@@ -63,8 +60,8 @@ const Nav = ({ isMenuOpen, setIsMenuOpen, activeSection, setIsHovering }: NavPro
                     onClick={() => setIsMenuOpen(false)}
                     className={`px-4 py-3 rounded-xl transition-all capitalize font-medium ${
                       activeSection === item
-                        ? 'text-violet-400 bg-violet-500/10'
-                        : 'text-zinc-400 hover:text-white hover:bg-white/5'
+                        ? 'text-blue-600 bg-blue-500/10'
+                        : 'text-slate-600 hover:text-slate-900 hover:bg-blue-50/80'
                     }`}
                   >
                     {item}

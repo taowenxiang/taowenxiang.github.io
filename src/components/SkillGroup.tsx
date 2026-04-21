@@ -1,13 +1,13 @@
 const colorMap: Record<string, string> = {
-  violet: 'bg-violet-500/10 text-violet-400 border-violet-500/20 hover:bg-violet-500/20',
-  emerald: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20 hover:bg-emerald-500/20',
-  pink: 'bg-pink-500/10 text-pink-400 border-pink-500/20 hover:bg-pink-500/20',
+  violet: 'bg-blue-500/10 text-blue-700 border-blue-400/25 hover:bg-blue-500/15',
+  emerald: 'bg-cyan-500/10 text-cyan-800 border-cyan-400/25 hover:bg-cyan-500/15',
+  pink: 'bg-sky-500/10 text-sky-700 border-sky-400/25 hover:bg-sky-500/15',
 };
 
 const SkillGroup = ({ title, icon, skills, color }: { title: string; icon: React.ReactNode; skills: string[]; color: string }) => {
   return (
     <div>
-      <h4 className="text-xs sm:text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-2 sm:mb-3 flex items-center gap-2">
+      <h4 className="text-xs sm:text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2 sm:mb-3 flex items-center gap-2">
         {icon}
         {title}
       </h4>

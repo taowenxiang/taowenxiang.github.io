@@ -11,7 +11,7 @@ const achievements = [
   { title: 'Third Prize, Provincial Level', sub: '4th University Electrical and Electronic Engineering Innovation Competition, 2024', icon: '06', wide: true },
 ];
 
-const Achievements = ({ setIsHovering }: { setIsHovering: (v: boolean) => void }) => {
+const Achievements = () => {
   return (
     <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 relative">
       <div className="max-w-5xl mx-auto">
@@ -21,13 +21,13 @@ const Achievements = ({ setIsHovering }: { setIsHovering: (v: boolean) => void }
           {achievements.map((ach, i) => (
             <RevealCard key={i} delay={i * 0.1} className={ach.wide ? 'sm:col-span-2' : ''}>
               <div className="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-500 group flex items-start gap-3 sm:gap-5 h-full">
-                <div className="text-2xl sm:text-3xl font-bold text-violet-500/20 group-hover:text-violet-500/40 transition-colors font-mono flex-shrink-0 min-w-[2rem] sm:min-w-[3rem]">
+                <div className="text-2xl sm:text-3xl font-bold text-blue-400/30 group-hover:text-blue-500/50 transition-colors font-mono flex-shrink-0 min-w-[2rem] sm:min-w-[3rem]">
                   {ach.icon}
                 </div>
                 <div className="min-w-0">
-                  <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-violet-400 transition-colors leading-snug">{ach.title}</h3>
-                  <p className="text-zinc-500 text-xs sm:text-sm mt-1">{ach.sub}</p>
-                  {ach.year && <p className="text-zinc-600 text-xs mt-1">{ach.year}</p>}
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug">{ach.title}</h3>
+                  <p className="text-slate-600 text-xs sm:text-sm mt-1">{ach.sub}</p>
+                  {ach.year && <p className="text-slate-500 text-xs mt-1">{ach.year}</p>}
                   {ach.links && (
                     <div className="flex flex-wrap gap-2 mt-2">
                       {ach.links.map((link) => (
@@ -36,9 +36,7 @@ const Achievements = ({ setIsHovering }: { setIsHovering: (v: boolean) => void }
                           href={link.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-xs text-violet-400 hover:text-violet-300 transition-colors"
-                          onMouseEnter={() => setIsHovering(true)}
-                          onMouseLeave={() => setIsHovering(false)}
+                          className="inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-700 transition-colors"
                         >
                           <ExternalLink size={12} />
                           {link.label}
