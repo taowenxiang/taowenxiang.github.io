@@ -1,4 +1,4 @@
-# Build Vite app and deploy to GitHub Pages on every push to main.
+# Deploy a lightweight redirect site to GitHub Pages on every push to main.
 # Repo Settings → Pages → Source: must be "GitHub Actions" (not "Deploy from a branch").
 
 name: Deploy to GitHub Pages
@@ -23,21 +23,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
+      - name: Prepare redirect site
+        run: cp -R pages-redirect/. public-pages/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: public-pages
 
   deploy:
     environment:
