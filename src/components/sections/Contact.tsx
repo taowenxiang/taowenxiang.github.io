@@ -26,7 +26,7 @@ const Contact = () => {
             Let's <span className="gradient-text">Connect</span>
           </h2>
           <p className="text-slate-600 text-base sm:text-lg mb-8 sm:mb-12 leading-relaxed px-2">
-            I'm always interested in discussing new opportunities, collaborations, or just having a chat about AI and technology.
+            I'm always interested in discussing new opportunities, collaborations, or just having a chat about HCI and AI.
           </p>
 
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 px-2 sm:px-0">

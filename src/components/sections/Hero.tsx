@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Linkedin, ChevronDown } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 
 type HeroProps = {
   typedText: string;
@@ -10,7 +10,11 @@ const Hero = ({ typedText }: HeroProps) => {
   const heroRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section id="about" ref={heroRef} className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 overflow-hidden pt-16">
+    <section
+      id="about"
+      ref={heroRef}
+      className="relative flex flex-col items-center px-4 sm:px-6 overflow-hidden pt-20 sm:pt-24 pb-20 sm:pb-24"
+    >
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 -left-20 sm:-left-32 w-64 sm:w-96 h-64 sm:h-96 bg-blue-500/15 rounded-full blur-3xl animate-blob" />
         <div className="absolute bottom-1/4 -right-20 sm:-right-32 w-64 sm:w-96 h-64 sm:h-96 bg-sky-400/15 rounded-full blur-3xl animate-blob" style={{ animationDelay: '2s' }} />
@@ -63,7 +67,7 @@ const Hero = ({ typedText }: HeroProps) => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.6 }}
-          className="text-slate-600 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed text-base sm:text-lg px-2"
+          className="text-slate-600 max-w-2xl mx-auto mb-5 sm:mb-6 leading-relaxed text-base sm:text-lg px-2"
         >
           AI Engineering undergraduate and research interested in designing{' '}
           <span className="text-blue-700 font-medium">AI-enabled HCI systems</span>, especially in{' '}
@@ -72,51 +76,15 @@ const Hero = ({ typedText }: HeroProps) => {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.6 }}
-          className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 px-4 sm:px-0"
-        >
-          <a
-            href="mailto:wtao565connect@gmail.com"
-            className="magnetic-btn flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-blue-700 to-sky-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-1"
-          >
-            <Mail size={18} />
-            Get in Touch
-          </a>
-          <a
-            href="https://www.linkedin.com/in/wenxiang-tao-0356b5402/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="magnetic-btn flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-white/90 border border-blue-300/80 text-blue-800 rounded-full font-medium hover:bg-white hover:border-blue-400 transition-all hover:-translate-y-1 shadow-sm"
-          >
-            <Linkedin size={18} />
-            LinkedIn
-          </a>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.4 }}
+          transition={{ delay: 1.2, duration: 0.5 }}
           className="flex items-center justify-center gap-2 text-slate-500"
         >
           <MapPin size={16} />
           <span className="text-sm">Guangzhou, China</span>
         </motion.div>
       </div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2 }}
-        className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-      >
-        <span className="text-slate-500 text-xs tracking-widest uppercase">Scroll</span>
-        <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}>
-          <ChevronDown size={20} className="text-slate-500" />
-        </motion.div>
-      </motion.div>
     </section>
   );
 };

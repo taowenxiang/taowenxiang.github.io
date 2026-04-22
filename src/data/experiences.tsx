@@ -30,16 +30,25 @@ export interface Experience {
 /* ------------------------------------------------------------------ */
 
 /** Inline link that opens in a new tab */
-export const Link = ({ href, children }: { href: string; children: ReactNode }) => (
+export const Link = ({
+  href,
+  children,
+  showIcon = true,
+}: {
+  href: string;
+  children: ReactNode;
+  /** When false, renders as a plain text-style link (no external-link glyph). */
+  showIcon?: boolean;
+}) => (
   <a
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex items-center gap-0.5 font-medium text-blue-600 hover:text-blue-700 hover:underline transition-colors"
+    className={`font-medium text-blue-600 hover:text-blue-700 hover:underline transition-colors ${showIcon ? 'inline-flex items-center gap-0.5' : 'inline'}`}
     onClick={(e) => e.stopPropagation()}
   >
     {children}
-    <ExternalLink size={11} className="ml-0.5 flex-shrink-0" />
+    {showIcon && <ExternalLink size={11} className="ml-0.5 flex-shrink-0" />}
   </a>
 );
 
@@ -65,7 +74,7 @@ export const experiences: Experience[] = [
     ),
     tags: ['HCI', 'LLM', 'Education'],
     points: [
-      <>Conducting undergraduate research on <B>human-AI interaction</B>, <B>LLM-based systems</B>, and <B>intelligent user interfaces design</B> under the supervision of Prof. Mingming Fan.</>,
+      <>Conducting undergraduate research on <B>human-AI interaction</B>, <B>LLM-based systems</B>, and <B>intelligent user interfaces design</B> under the supervision of <Link href="https://www.mingmingfan.com" showIcon={true}>Prof. Mingming Fan</Link>.</>,
       <>Working on multiple ongoing projects spanning <B>interactive ambiguity resolution</B>, <B>LLM-supported intention alignment</B>, and <B>AI-assisted learning systems design</B>.</>,
       <>Contributing to problem formulation, prompt and agent workflow development, and evaluation design across research prototypes.</>,
     ],
@@ -91,7 +100,7 @@ export const experiences: Experience[] = [
   },
   {
     title: 'Undergraduate Researcher',
-    company: 'AI Thrust, HKUST-GZ',
+    company: 'Data Science and Analytics Thrust, HKUST-GZ',
     period: '2026.01 - Present',
     icon: (
       <img
@@ -109,7 +118,7 @@ export const experiences: Experience[] = [
   },
   {
     title: 'Undergraduate Researcher',
-    company: 'AI Thrust, HKUST-GZ',
+    company: 'Artificial Intelligence Thrust, HKUST-GZ',
     period: '2025.06 - 2025.12',
     icon: (
       <img

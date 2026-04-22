@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
-const navItems = ['about', 'education', 'experience', 'projects', 'skills', 'leadership', 'contact'];
+const navItems = ['about', 'education', 'experience', 'contact'];
 
 type NavProps = {
   isMenuOpen: boolean;
