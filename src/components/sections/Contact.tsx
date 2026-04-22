@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, FileText, ArrowUpRight } from 'lucide-react';
+import { Mail, Linkedin, Github, FileText, ArrowUpRight } from 'lucide-react';
 import RevealCard from '../RevealCard';
 
 const Contact = () => {
@@ -26,7 +26,7 @@ const Contact = () => {
             Let's <span className="gradient-text">Connect</span>
           </h2>
           <p className="text-slate-600 text-base sm:text-lg mb-8 sm:mb-12 leading-relaxed px-2">
-            I'm always interested in discussing new opportunities, collaborations, or just having a chat about HCI and AI.
+          I’m always excited to connect with people working in AI and HCI. I’m currently open to internship opportunities, undergraduate visiting programs, and research collaborations. If you’re interested in human-AI interaction, intelligent systems, or AI for learning, I’d love to hear from you.
           </p>
 
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 px-2 sm:px-0">
@@ -49,6 +49,17 @@ const Contact = () => {
             >
               <Linkedin size={16} className="sm:w-[18px] sm:h-[18px]" />
               LinkedIn
+            </motion.a>
+            <motion.a
+              href="https://github.com/taowenxiang"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ y: -4 }}
+              whileTap={{ scale: 0.97 }}
+              className="magnetic-btn flex items-center justify-center gap-2 px-4 sm:px-8 py-3 sm:py-4 rounded-full font-medium transition-all text-sm sm:text-base bg-white/90 border border-blue-300/80 text-blue-800 hover:bg-white hover:border-blue-400 shadow-sm"
+            >
+              <Github size={16} className="sm:w-[18px] sm:h-[18px]" />
+              GitHub
             </motion.a>
           </div>
 
