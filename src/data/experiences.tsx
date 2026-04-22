@@ -54,7 +54,25 @@ export const B = ({ children }: { children: ReactNode }) => (
 
 export const experiences: Experience[] = [
   {
-    title: 'Undergraduate Researcher, 2026',
+    title: 'Founding President',
+    company: 'Web Development Enthusiasts Society, HKUST-GZ',
+    period: '2026.01 - Present',
+    icon: (
+      <img
+        src="/logos/HKUST(GZ).svg"
+        alt=""
+      />
+    ),
+    tags: ['Leadership', 'Web Dev', 'Community'],
+    points: [
+      <>Founded the society and served as its first president.</>,
+      <>Organized regular learning sessions and peer exchange activities on <B>web development</B>, <B>product building</B>, and <B>technical collaboration</B>.</>,
+      <>Initiated the inaugural <B>Almost Million Web Contest (AMWC)</B> as a flagship student web development event.</>,
+    ],
+    color: 'from-teal-500 to-blue-600',
+  },
+  {
+    title: 'Undergraduate Researcher',
     company: 'AI Thrust, HKUST-GZ',
     period: '2026.01 - Present',
     icon: (
@@ -72,7 +90,7 @@ export const experiences: Experience[] = [
     color: 'from-blue-500 to-sky-500',
   },
   {
-    title: 'Undergraduate Researcher, 2025',
+    title: 'Undergraduate Researcher',
     company: 'AI Thrust, HKUST-GZ',
     period: '2025.06 - 2025.12',
     icon: (
@@ -90,7 +108,7 @@ export const experiences: Experience[] = [
     color: 'from-indigo-500 to-blue-500',
   },
   {
-    title: 'Core Organizer & Platform Builder, 2025',
+    title: 'Core Organizer & Platform Builder',
     company: 'uniKorn TechG Hub: HKUST-GZ Student Learning & Life Community',
     period: '2025.04 - Present',
     icon: (
