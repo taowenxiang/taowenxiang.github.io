@@ -54,6 +54,24 @@ export const B = ({ children }: { children: ReactNode }) => (
 
 export const experiences: Experience[] = [
   {
+    title: 'Undergraduate Researcher',
+    company: 'Research Group of Prof. Mingming Fan, HKUST-GZ',
+    period: '2026.02 - Present',
+    icon: (
+      <img
+        src="/logos/HKUST(GZ).svg"
+        alt=""
+      />
+    ),
+    tags: ['HCI', 'LLM', 'Education'],
+    points: [
+      <>Conducting undergraduate research on <B>human-AI interaction</B>, <B>LLM-based systems</B>, and <B>intelligent user interfaces design</B> under the supervision of Prof. Mingming Fan.</>,
+      <>Working on multiple ongoing projects spanning <B>interactive ambiguity resolution</B>, <B>LLM-supported intention alignment</B>, and <B>AI-assisted learning systems design</B>.</>,
+      <>Contributing to problem formulation, prompt and agent workflow development, and evaluation design across research prototypes.</>,
+    ],
+    color: 'from-sky-500 to-cyan-500',
+  },
+  {
     title: 'Founding President',
     company: 'Web Development Enthusiasts Society, HKUST-GZ',
     period: '2026.01 - Present',
