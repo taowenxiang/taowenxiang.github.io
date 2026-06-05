@@ -11,7 +11,7 @@ import Footer from './components/sections/Footer';
 const phrases = [
   'AI Engineering Undergraduate',
   'HCI & Human-centered AI',
-  'user intent understanding',
+  'User Intent Understanding',
   'Full Stack Developer',
 ];
 
