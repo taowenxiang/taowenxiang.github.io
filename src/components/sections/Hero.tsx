@@ -71,7 +71,7 @@ const Hero = ({ typedText }: HeroProps) => {
         >
           AI Engineering undergraduate and research interested in designing{' '}
           <span className="text-blue-700 font-medium">AI-enabled HCI systems</span>, especially in{' '}
-          <span className="text-sky-600 font-medium">educational settings</span> and student learning-life contexts.
+          <span className="text-sky-600 font-medium">intent understanding</span> and AI-enabled community building.
           Currently at <span className="text-cyan-600 font-medium">HKUST-GZ</span>.
         </motion.p>
 
