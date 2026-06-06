@@ -29,11 +29,12 @@ const Education = () => {
             <div className="mt-5 pt-5 border-t border-blue-200/50">
               <h4 className="text-sm font-semibold text-slate-800 mb-3">Selected Honors & Awards</h4>
               <ul className="space-y-2.5 text-sm text-slate-600 leading-snug list-disc pl-5 marker:text-blue-600/70">
+                <li>Honorable Mention, COMAP MCM/ICM, 2026</li>
+                <li>Dean&rsquo;s List Award, Fall 2025-2026</li>
+                <li>Dean&rsquo;s List Award, Fall 2024-2025</li>
                 <li>
                   Second Prize, HKUST (GZ) Visitor System Development Competition, 2024
                 </li>
-                <li>Dean&rsquo;s List Award, Fall 2024-2025</li>
-                <li>Dean&rsquo;s List Award, Fall 2025-2026</li>
               </ul>
             </div>
           </div>
@@ -54,8 +55,8 @@ const Education = () => {
               <div className="mt-5 pt-5 border-t border-blue-200/50">
                 <h4 className="text-sm font-semibold text-slate-800 mb-3">Selected Honors & Awards</h4>
                 <ul className="space-y-2.5 text-sm text-slate-600 leading-snug list-disc pl-5 marker:text-blue-600/70">
-                  <li>First Prize, Advanced Division, National Olympiad in Informatics in Provinces (NOIP), 2021</li>
                   <li>Second Prize, High School Student Research Summer Camp, University of Science and Technology of China (USTC), 2022</li>
+                  <li>First Prize, Senior Division, National Olympiad in Informatics in Provinces (NOIP), 2021</li>
                 </ul>
               </div>
             </div>
@@ -75,8 +76,9 @@ const Education = () => {
               <div className="mt-5 pt-5 border-t border-sky-200/50">
                 <h4 className="text-sm font-semibold text-slate-800 mb-3">Selected Honors & Awards</h4>
                 <ul className="space-y-2.5 text-sm text-slate-600 leading-snug list-disc pl-5 marker:text-sky-600/70">
-                  <li>First Prize, Beginner Division, National Olympiad in Informatics in Provinces (NOIP), 2018</li>
-                  <li>First Prize, Advanced Division, National Olympiad in Informatics in Provinces (NOIP), 2019</li>
+                  <li>First Prize, Senior Division, National Olympiad in Informatics in Provinces (NOIP), 2019</li>
+                  <li>First Prize, Junior Division, National Olympiad in Informatics in Provinces (NOIP), 2018-2020</li>
+                  <li>First Prize, Junior Division, National Olympiad in Informatics in Provinces (NOIP), 2017 (pre-enrollment training with Wuhu No. 27 Middle School)</li>
                 </ul>
               </div>
             </div>

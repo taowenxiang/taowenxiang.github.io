@@ -63,9 +63,9 @@ export const B = ({ children }: { children: ReactNode }) => (
 
 export const experiences: Experience[] = [
   {
-    title: 'Undergraduate Researcher',
-    company: 'Research Group of Prof. Mingming Fan, HKUST-GZ',
-    period: '2026.02 - Present',
+    title: 'Undergraduate Research Intern',
+    company: 'APEX-AI-Support-Learning/Education Group, led by Prof. Mingming Fan, HKUST-GZ',
+    period: '2026.03 - Present',
     icon: (
       <img
         src="/logos/HKUST(GZ).svg"
@@ -99,9 +99,9 @@ export const experiences: Experience[] = [
     color: 'from-teal-500 to-blue-600',
   },
   {
-    title: 'Undergraduate Researcher',
+    title: 'Undergraduate Research Trainee, X Program',
     company: 'Data Science and Analytics Thrust, HKUST-GZ',
-    period: '2026.01 - Present',
+    period: '2026.01 - 2026.06',
     icon: (
       <img
         src="/logos/HKUST(GZ).svg"
@@ -117,7 +117,7 @@ export const experiences: Experience[] = [
     color: 'from-blue-500 to-sky-500',
   },
   {
-    title: 'Undergraduate Researcher',
+    title: 'Undergraduate Research Trainee, X Program',
     company: 'Artificial Intelligence Thrust, HKUST-GZ',
     period: '2025.06 - 2025.12',
     icon: (
