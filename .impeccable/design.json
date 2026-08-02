@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-02T00:00:00+08:00",
+  "title": "Design System: Wenxiang Tao Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "research-blue": {
+        "role": "primary",
+        "displayName": "Research Blue",
+        "canonical": "#2563EB",
+        "tonalRamp": ["oklch(24% 0.12 260)", "oklch(34% 0.16 260)", "oklch(45% 0.2 260)", "oklch(55% 0.22 260)", "oklch(66% 0.17 260)", "oklch(77% 0.11 260)", "oklch(87% 0.06 260)", "oklch(95% 0.025 260)"]
+      },
+      "signal-cyan": {
+        "role": "secondary",
+        "displayName": "Signal Cyan",
+        "canonical": "#06B6D4",
+        "tonalRamp": ["oklch(23% 0.08 210)", "oklch(34% 0.11 210)", "oklch(45% 0.14 210)", "oklch(58% 0.15 210)", "oklch(69% 0.13 210)", "oklch(79% 0.09 210)", "oklch(88% 0.05 210)", "oklch(95% 0.02 210)"]
+      },
+      "field": {
+        "role": "neutral",
+        "displayName": "Open Field",
+        "canonical": "#F0F7FF",
+        "tonalRamp": ["oklch(18% 0.02 250)", "oklch(30% 0.02 250)", "oklch(43% 0.02 250)", "oklch(56% 0.02 250)", "oklch(69% 0.018 250)", "oklch(80% 0.016 250)", "oklch(90% 0.014 250)", "oklch(97% 0.012 250)"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Archive Ink",
+        "canonical": "#0F172A",
+        "tonalRamp": ["oklch(17% 0.03 260)", "oklch(27% 0.03 260)", "oklch(39% 0.028 260)", "oklch(51% 0.025 260)", "oklch(64% 0.022 260)", "oklch(76% 0.018 260)", "oklch(87% 0.012 260)", "oklch(95% 0.006 260)"]
+      }
+    },
+    "typographyMeta": {
+      "display": {"displayName": "Display", "purpose": "Name and decisive project headlines."},
+      "headline": {"displayName": "Headline", "purpose": "Section and case-study titles."},
+      "body": {"displayName": "Body", "purpose": "Readable project and experience narratives."},
+      "label": {"displayName": "Technical Label", "purpose": "Stack, route, model, and build metadata only."}
+    },
+    "shadows": [
+      {"name": "navigation-lift", "value": "0 4px 8px rgba(15, 23, 42, 0.08)", "purpose": "Separate fixed navigation after scroll."},
+      {"name": "interaction-lift", "value": "0 3px 8px rgba(37, 99, 235, 0.12)", "purpose": "Optional hover feedback on one featured surface."}
+    ],
+    "motion": [
+      {"name": "state", "value": "180ms cubic-bezier(0.25, 1, 0.5, 1)", "purpose": "Color, outline, and compact interaction feedback."},
+      {"name": "reveal", "value": "480ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "One orchestrated section entrance when motion is allowed."}
+    ],
+    "breakpoints": [
+      {"name": "sm", "value": "640px"},
+      {"name": "md", "value": "768px"},
+      {"name": "lg", "value": "1024px"},
+      {"name": "xl", "value": "1280px"}
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single strongest action within a view.",
+      "html": "<button class=\"ds-button-primary\">Open live demo</button>",
+      "css": ".ds-button-primary{background:#2563eb;color:#fff;border:0;border-radius:8px;padding:12px 18px;font:600 14px/1.2 'Space Grotesk',sans-serif;transition:background 180ms cubic-bezier(.25,1,.5,1),transform 180ms cubic-bezier(.25,1,.5,1)}.ds-button-primary:hover{background:#1d4ed8;transform:translateY(-1px)}.ds-button-primary:focus-visible{outline:2px solid #06b6d4;outline-offset:3px}.ds-button-primary:active{transform:translateY(0)}"
+    },
+    {
+      "name": "Secondary Link",
+      "kind": "button",
+      "description": "A bordered evidence link for source or supporting material.",
+      "html": "<a class=\"ds-link-secondary\" href=\"#\">Review source</a>",
+      "css": ".ds-link-secondary{display:inline-flex;align-items:center;color:#0f172a;background:#fff;border:1px solid #bfdbfe;border-radius:8px;padding:11px 17px;text-decoration:none;font:600 14px/1.2 'Space Grotesk',sans-serif;transition:border-color 180ms cubic-bezier(.25,1,.5,1),color 180ms cubic-bezier(.25,1,.5,1)}.ds-link-secondary:hover{border-color:#2563eb;color:#1d4ed8}.ds-link-secondary:focus-visible{outline:2px solid #06b6d4;outline-offset:3px}"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "description": "A quiet section link with a solid active marker.",
+      "html": "<a class=\"ds-nav-link\" href=\"#projects\">Projects</a>",
+      "css": ".ds-nav-link{display:inline-flex;color:#475569;border-bottom:2px solid transparent;padding:8px 4px;text-decoration:none;font:500 14px/1.2 'Space Grotesk',sans-serif;transition:color 180ms cubic-bezier(.25,1,.5,1),border-color 180ms cubic-bezier(.25,1,.5,1)}.ds-nav-link:hover{color:#0f172a;border-color:#bfdbfe}.ds-nav-link:focus-visible{outline:2px solid #06b6d4;outline-offset:3px}.ds-nav-link[aria-current=\"page\"]{color:#1d4ed8;border-color:#2563eb}"
+    },
+    {
+      "name": "Project Evidence Block",
+      "kind": "card",
+      "refersTo": "project-surface",
+      "description": "A flat project summary that leads with outcome and evidence.",
+      "html": "<article class=\"ds-project\"><h3>SmartLearn</h3><p>Ask questions against an uploaded PDF and inspect page-level evidence.</p><a href=\"#\">Open live demo</a></article>",
+      "css": ".ds-project{max-width:420px;background:#fff;color:#0f172a;border:1px solid #bfdbfe;border-radius:12px;padding:24px;font-family:'Space Grotesk',sans-serif}.ds-project h3{margin:0 0 8px;font-size:22px;line-height:1.2}.ds-project p{margin:0 0 18px;color:#475569;line-height:1.6}.ds-project a{color:#1d4ed8;font-weight:600;text-underline-offset:4px}.ds-project a:hover{text-decoration-thickness:2px}.ds-project a:focus-visible{outline:2px solid #06b6d4;outline-offset:3px}"
+    },
+    {
+      "name": "Technical Tag",
+      "kind": "chip",
+      "description": "Compact metadata for a technology, model, route, or build detail.",
+      "html": "<span class=\"ds-tag\">FastAPI</span>",
+      "css": ".ds-tag{display:inline-flex;background:#eff6ff;color:#334155;border-radius:8px;padding:5px 8px;font:500 12px/1.2 'JetBrains Mono',monospace}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Open Lab Archive",
+    "overview": "The portfolio should feel like entering a working research space whose notes have been carefully prepared for visitors. It is bright, structured, and technically credible, with evidence close to every claim. Blue supplies continuity and trust; cyan is a rare signal for live or interactive work rather than a decorative flourish. The system rejects generic resume-card repetition, loud AI marketing treatments, dense dashboard chrome, and interactions that compete with the work.",
+    "keyCharacteristics": ["Evidence-led project narratives with visible source and demo paths.", "A cool, bright field with solid surfaces and crisp blue boundaries.", "Strong typographic hierarchy, concise prose, and progressively disclosed depth.", "Flat-by-default components with unmistakable focus and interaction states.", "Responsive behavior that preserves reading order and keyboard access."],
+    "rules": [
+      {"name": "The Signal Rule", "body": "Signal Cyan appears only when it communicates an interactive or live state. If it is merely decorative, remove it.", "section": "colors"},
+      {"name": "The Solid Type Rule", "body": "Text uses one solid color. Gradient-filled type is prohibited.", "section": "colors"},
+      {"name": "The One Reading Voice Rule", "body": "Body copy remains sans-serif and sentence case. Monospace never stands in for personality.", "section": "typography"},
+      {"name": "The Flat-at-Rest Rule", "body": "Static content has no decorative shadow. If every section appears elevated, the hierarchy has failed.", "section": "elevation"}
+    ],
+    "dos": ["Do place a live demo, source link, publication, or measurable outcome near each significant project claim.", "Do use Research Blue for actions and Signal Cyan only for live-state communication.", "Do preserve a 70-character reading measure and a 4.5:1 minimum contrast ratio for body text.", "Do provide loading, empty, error, disconnected, and credential-required states for interactive demos.", "Do make every interaction keyboard accessible and honor reduced-motion preferences."],
+    "donts": ["Don't use generic resume templates that reduce every experience to an identical card.", "Don't use loud AI product marketing built from gradient text, glass panels, vague claims, and excessive motion.", "Don't make the portfolio resemble a dense internal engineering dashboard.", "Don't add decorative interactions that obscure project evidence or slow down navigation.", "Don't pair a one-pixel border with a broad diffuse shadow on the same surface.", "Don't store visitor API keys in local storage, analytics, logs, or application databases."]
+  }
+}

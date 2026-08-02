@@ -5,6 +5,7 @@ import Nav from './components/Nav';
 import Hero from './components/sections/Hero';
 import Education from './components/sections/Education';
 import Experience from './components/sections/Experience';
+import FeaturedProject from './components/sections/FeaturedProject';
 import Contact from './components/sections/Contact';
 import Footer from './components/sections/Footer';
 
@@ -70,13 +71,13 @@ const App = () => {
     const sections = document.querySelectorAll('section[id]');
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
+        for (const entry of entries) {
           if (entry.isIntersecting) setActiveSection(entry.target.id);
-        });
+        }
       },
       { threshold: 0.2 },
     );
-    sections.forEach((s) => observer.observe(s));
+    for (const section of sections) observer.observe(section);
     return () => observer.disconnect();
   }, []);
 
@@ -107,6 +108,9 @@ const App = () => {
       <div className="section-divider" />
 
       <Experience />
+      <div className="section-divider" />
+
+      <FeaturedProject />
       <div className="section-divider" />
 
       <Contact />
