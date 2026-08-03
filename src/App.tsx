@@ -75,7 +75,7 @@ const App = () => {
           if (entry.isIntersecting) setActiveSection(entry.target.id);
         }
       },
-      { rootMargin: '-20% 0px -65% 0px', threshold: 0 },
+      { threshold: 0.2 },
     );
     for (const section of sections) observer.observe(section);
     return () => observer.disconnect();
