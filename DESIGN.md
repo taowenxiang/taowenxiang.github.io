@@ -151,9 +151,9 @@ The archive is flat by default. Depth comes from solid surface contrast, boundar
 - **States:** Research Blue indicates the current section; every link has a visible keyboard focus state.
 - **Mobile:** A single menu button controls a labelled disclosure without losing focus or page position.
 
-### Project Evidence Block
-- **Style:** The portfolio exposes one canonical demo-directory entry; individual live demos, source links, stacks, and constraints are organized on that directory surface.
-- **Behavior:** The primary evidence link uses the explicit label "Browse project demos" and points to `demo.wenxiangtao.com`; direct project routes remain available for bookmarks and sharing.
+### Project Evidence Cards
+- **Style:** Projects use the same section heading, width, spacing rhythm, surface color, and blue-cyan accent language as Education and Experience. Each card contains one concise description, three technical tags, and no repeated directory explanation.
+- **Behavior:** Every project exposes two explicit actions: "Open demo" links directly to its stable route under `demo.wenxiangtao.com`, and "GitHub source" opens its repository. The standalone demo directory remains available when visited directly but is not the portfolio's project entry point.
 
 ## Do's and Don'ts
 
