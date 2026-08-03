@@ -152,8 +152,8 @@ The archive is flat by default. Depth comes from solid surface contrast, boundar
 - **Mobile:** A single menu button controls a labelled disclosure without losing focus or page position.
 
 ### Project Evidence Block
-- **Style:** The portfolio exposes one canonical demo-directory entry; individual live demos, source links, stacks, and constraints are organized on that directory surface.
-- **Behavior:** The primary evidence link uses the explicit label "Browse project demos" and points to `demo.wenxiangtao.com`; direct project routes remain available for bookmarks and sharing.
+- **Style:** The portfolio exposes one compact demo-directory entry band. It contains a title, one sentence, a live count, and one action; individual project information belongs to the directory surface.
+- **Behavior:** The explicit "Browse demos" action points to `demo.wenxiangtao.com`; direct project routes remain available for bookmarks and sharing.
 
 ## Do's and Don'ts
 
