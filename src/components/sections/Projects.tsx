@@ -1,31 +1,28 @@
-import { Lightbulb } from 'lucide-react';
-import SectionHeading from '../SectionHeading';
-import RevealCard from '../RevealCard';
-import ProjectCard from '../ProjectCard';
-import { projects } from '../../data/projects';
+import { FolderKanban } from "lucide-react";
+import { projects } from "../../data/projects";
+import ProjectCard from "../ProjectCard";
+import RevealCard from "../RevealCard";
+import SectionHeading from "../SectionHeading";
 
 const Projects = () => {
-  return (
-    <section id="projects" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 relative">
-      <div className="max-w-6xl mx-auto">
-        <SectionHeading icon={Lightbulb}>Projects</SectionHeading>
+	return (
+		<section
+			id="projects"
+			className="relative px-4 py-16 sm:px-6 sm:py-24 md:py-32"
+		>
+			<div className="mx-auto max-w-5xl">
+				<SectionHeading icon={FolderKanban}>Projects</SectionHeading>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {projects.map((project, i) => (
-            <RevealCard key={i} delay={i * 0.08}>
-              {project.link ? (
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="block h-full">
-                  <ProjectCard project={project} />
-                </a>
-              ) : (
-                <ProjectCard project={project} />
-              )}
-            </RevealCard>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+				<div className="grid gap-4 sm:gap-6 md:grid-cols-2">
+					{projects.map((project, index) => (
+						<RevealCard key={project.title} delay={index * 0.08}>
+							<ProjectCard project={project} />
+						</RevealCard>
+					))}
+				</div>
+			</div>
+		</section>
+	);
 };
 
 export default Projects;

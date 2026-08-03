@@ -5,7 +5,7 @@ import Nav from './components/Nav';
 import Hero from './components/sections/Hero';
 import Education from './components/sections/Education';
 import Experience from './components/sections/Experience';
-import FeaturedProject from './components/sections/FeaturedProject';
+import Projects from './components/sections/Projects';
 import Contact from './components/sections/Contact';
 import Footer from './components/sections/Footer';
 
@@ -110,7 +110,7 @@ const App = () => {
       <Experience />
       <div className="section-divider" />
 
-      <FeaturedProject />
+      <Projects />
       <div className="section-divider" />
 
       <Contact />
