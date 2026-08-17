@@ -61,16 +61,19 @@ const Experience = () => {
 
                       {/* Tags */}
                       {exp.tags && exp.tags.length > 0 && (
-                        <div className="flex flex-wrap gap-1.5 mt-1.5">
+                        <ul
+                          className="flex flex-wrap items-center gap-1.5 sm:gap-2 mt-2.5"
+                          aria-label={`${exp.title} focus areas`}
+                        >
                           {exp.tags.map((tag) => (
-                            <span
+                            <li
                               key={tag}
-                              className={`px-2 py-0.5 text-[10px] sm:text-xs font-medium rounded-full bg-gradient-to-r ${exp.color} text-white/90`}
+                              className="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-1 text-[11px] sm:text-xs font-medium leading-none text-blue-700"
                             >
                               {tag}
-                            </span>
+                            </li>
                           ))}
-                        </div>
+                        </ul>
                       )}
                     </div>
 
