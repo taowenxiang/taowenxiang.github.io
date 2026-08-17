@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
-import { ExternalLink, Globe, FlaskConical, Users, BrainCircuit, Mic, Code } from 'lucide-react';
+import type { ReactNode } from 'react';
+import { ExternalLink } from 'lucide-react';
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -64,26 +64,26 @@ export const B = ({ children }: { children: ReactNode }) => (
 export const experiences: Experience[] = [
   {
     title: 'Undergraduate Research Intern',
-    company: 'APEX-AI-Support-Learning/Education Group, led by Prof. Mingming Fan, HKUST-GZ',
-    period: '2026.03 - Present',
+    company: 'APEX AI-Support-Learning/Education Group, HKUST(GZ)',
+    period: 'Mar 2026 - Present',
     icon: (
       <img
         src="/logos/HKUST(GZ).svg"
         alt=""
       />
     ),
-    tags: ['HCI', 'LLM', 'Education'],
+    tags: ['Human-AI Interaction', 'Intent Alignment', 'Intelligent Interfaces'],
     points: [
-      <>Conducting undergraduate research on <B>human-AI interaction</B>, <B>LLM-based systems</B>, and <B>intelligent user interfaces design</B> under the supervision of <Link href="https://www.mingmingfan.com" showIcon={true}>Prof. Mingming Fan</Link>.</>,
-      <>Working on multiple ongoing projects spanning <B>interactive ambiguity resolution</B>, <B>LLM-supported intention alignment</B>, and <B>AI-assisted learning systems design</B>.</>,
-      <>Contributing to problem formulation, prompt and agent workflow development, and evaluation design across research prototypes.</>,
+      <span key="apex-focus">Conducting research on <B>human-AI interaction</B>, <B>intention alignment</B>, <B>ambiguity resolution</B>, intelligent user interfaces, and collaborative AI systems under the supervision of <Link href="https://www.mingmingfan.com" showIcon={true}>Prof. Mingming Fan</Link>.</span>,
+      <span key="apex-cotalk">Designed and prototyped <B>CoTalk</B>, a Chinese-knot-inspired interactive representation that externalizes divergent and shared recollections for collaborative reflection while preserving user agency.</span>,
+      'Contributing to research framing, interaction and visualization concepts, prototyping, and evaluation design.',
     ],
     color: 'from-sky-500 to-cyan-500',
   },
   {
     title: 'Founding President',
-    company: 'Web Development Enthusiasts Society, HKUST-GZ',
-    period: '2026.01 - Present',
+    company: 'Network of Developers & Engineers (NODE), HKUST(GZ)',
+    period: 'Jan 2026 - Present',
     icon: (
       <img
         src="/logos/HKUST(GZ).svg"
@@ -92,52 +92,52 @@ export const experiences: Experience[] = [
     ),
     tags: ['Leadership', 'Web Dev', 'Community'],
     points: [
-      <>Founded the society and served as its first president.</>,
-      <>Organized regular learning sessions and peer exchange activities on <B>web development</B>, <B>product building</B>, and <B>technical collaboration</B>.</>,
-      <>Initiated the inaugural <B>Almost Million Web Contest (AMWC)</B> as a flagship student web development event.</>,
+      'Founded a student developer community for collaborative campus product building.',
+      <span key="node-learning">Organized peer learning and technical exchange around <B>web development</B>, <B>product building</B>, and <B>engineering collaboration</B>.</span>,
+      <span key="node-amwc">Initiated the inaugural <B>Almost Million Web Contest (AMWC)</B> as a student web development event.</span>,
     ],
     color: 'from-teal-500 to-blue-600',
   },
   {
     title: 'Undergraduate Research Trainee, X Program',
-    company: 'Data Science and Analytics Thrust, HKUST-GZ',
-    period: '2026.01 - 2026.06',
+    company: 'Data Science and Analytics Thrust, HKUST(GZ)',
+    period: 'Jan 2026 - Jun 2026',
     icon: (
       <img
         src="/logos/HKUST(GZ).svg"
         alt=""
       />
     ),
-    tags: ['NLP', 'LLM', 'HCI', 'NL2SQL'],
+    tags: ['Intent Understanding', 'Ambiguity', 'Text-to-SQL'],
     points: [
-      <>Explored <B>interactive ambiguity resolution for Text-to-SQL</B>, transforming user interaction from low-level SQL editing into high-level semantic clarification.</>,
-      <>Built a <B>taxonomy-guided two-agent pipeline</B> to generate clarification questions from database schemas and natural language queries, and to align them with gold SQL for offline evaluation on BIRD.</>,
-      <>Investigated how <B>candidate worlds</B>, <B>ambiguity taxonomy</B>, and <B>expected information gain</B> can be combined to identify executable semantic ambiguities and reduce unnecessary user interactions.</>,
+      <span key="sql-interaction">Explored <B>interactive ambiguity resolution for Text-to-SQL</B>, transforming user interaction from low-level SQL editing into high-level semantic clarification.</span>,
+      <span key="sql-pipeline">Built a <B>taxonomy-guided two-agent pipeline</B> to generate clarification questions from database schemas and natural language queries, and to align them with gold SQL for offline evaluation on BIRD.</span>,
+      <span key="sql-concepts">Investigated how <B>candidate worlds</B>, <B>ambiguity taxonomy</B>, and <B>expected information gain</B> can be combined to identify executable semantic ambiguities and reduce unnecessary user interactions.</span>,
     ],
     color: 'from-blue-500 to-sky-500',
   },
   {
     title: 'Undergraduate Research Trainee, X Program',
-    company: 'Artificial Intelligence Thrust, HKUST-GZ',
-    period: '2025.06 - 2025.12',
+    company: 'Artificial Intelligence Thrust, HKUST(GZ)',
+    period: 'Jun 2025 - Dec 2025',
     icon: (
       <img
         src="/logos/HKUST(GZ).svg"
         alt=""
       />
     ),
-    tags: ['NLP', 'Speech', 'LLM'],
+    tags: ['Speech Data', 'LLM-Assisted Discovery', 'Data Pipeline'],
     points: [
       "Explored how accents are influenced by both a speaker's first language and their surrounding language environment.",
-      <>Built an <B>LLM-assisted toolkit</B> to automatically discover and collect YouTube audio likely to contain mixed-accent speech.</>,
-      'Designed a data cleaning and preprocessing pipeline, resulting in a speech dataset with over 1,000 hours of audio.',
+      <span key="speech-toolkit">Built an <B>LLM-assisted toolkit</B> to automatically discover and collect YouTube audio likely to contain mixed-accent speech.</span>,
+      <span key="speech-evidence">Designed a cleaning and preprocessing pipeline that produced <B>1,000+ hours of sentence-level audio clips</B>.</span>,
     ],
     color: 'from-indigo-500 to-blue-500',
   },
   {
     title: 'Core Organizer & Platform Builder',
-    company: 'uniKorn TechG Hub: HKUST-GZ Student Learning & Life Community',
-    period: '2025.04 - Present',
+    company: 'UniKorn TechG Hub: HKUST(GZ) Student Learning & Campus-Life Platform',
+    period: 'Apr 2025 - Present',
     icon: (
       <img
         src="/logos/uniKorn.svg"
@@ -146,11 +146,11 @@ export const experiences: Experience[] = [
     ),
     tags: ['Full Stack', 'Community', 'Campus Engagement'],
     points: [
-      <>Co-built and operated a <B>student community platform</B> serving learning and campus life at HKUST-GZ.</>,
+      <span key="unikorn-platform">Co-built and operated a <B>student community platform</B> serving learning and campus life at HKUST(GZ).</span>,
       'Supported the development and operation of key features including forums, course reviews, schedule planning, and team formation.',
       'Helped organize student-facing public-service activities, including course-selection info sessions and Q&A support for new students.',
-      <>Grew the platform to <B>500+ registered users</B> (to date).</>,
-      <>Visit our website <Link href="https://unikorn.axfff.com">https://unikorn.axfff.com</Link>.</>,
+      <span key="unikorn-users">Grew the platform to <B>500+ registered users</B> (to date).</span>,
+      <span key="unikorn-link">Visit our website <Link href="https://unikorn.axfff.com">https://unikorn.axfff.com</Link>.</span>,
     ],
     color: 'from-cyan-600 to-blue-700',
   },

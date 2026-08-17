@@ -10,10 +10,10 @@ import Contact from './components/sections/Contact';
 import Footer from './components/sections/Footer';
 
 const phrases = [
-  'AI Engineering Undergraduate',
-  'HCI & Human-centered AI',
-  'User Intent Understanding',
-  'Full Stack Developer',
+  'Human-AI Interaction',
+  'Interactive Intelligent Systems',
+  'Human-Centered AI',
+  'Multi-Agent Systems',
 ];
 
 /** 每个短语完整显示后停留多久再开始删除（毫秒） */

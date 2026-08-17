@@ -26,12 +26,12 @@ const Contact = () => {
             Let's <span className="gradient-text">Connect</span>
           </h2>
           <p className="text-slate-600 text-base sm:text-lg mb-8 sm:mb-12 leading-relaxed px-2">
-          I’m always excited to connect with people working in AI and HCI. I’m currently open to internship opportunities, undergraduate visiting programs, and research collaborations. If you’re interested in human-AI interaction, intelligent systems, or AI for learning, I’d love to hear from you.
+          I’m currently open to research internships, undergraduate visiting programs, and collaborations in Human-AI Interaction, Interactive Intelligent Systems, Human-Centered AI, and Information Visualization.
           </p>
 
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 px-2 sm:px-0">
             <motion.a
-              href="mailto:wtao565connect@gmail.com"
+              href="mailto:wtao565@connect.hkust-gz.edu.cn"
               whileHover={{ y: -4 }}
               whileTap={{ scale: 0.97 }}
               className="magnetic-btn flex items-center justify-center gap-2 px-4 sm:px-8 py-3 sm:py-4 rounded-full font-medium transition-all text-sm sm:text-base bg-gradient-to-r from-blue-700 to-sky-500 text-white hover:shadow-lg hover:shadow-blue-500/30"

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Children, isValidElement } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Briefcase, ChevronDown, ExternalLink } from 'lucide-react';
 import SectionHeading from '../SectionHeading';
@@ -16,7 +17,7 @@ const Experience = () => {
         <div className="relative">
           <div className="space-y-5 sm:space-y-8">
             {experiences.map((exp, i) => (
-              <RevealCard key={i} delay={i * 0.05}>
+              <RevealCard key={`${exp.title}-${exp.company}-${exp.period}`} delay={i * 0.05}>
                 <div
                   className="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-500 group relative overflow-hidden"
                   onMouseEnter={() => setExpandedExp(i)}
@@ -61,9 +62,9 @@ const Experience = () => {
                       {/* Tags */}
                       {exp.tags && exp.tags.length > 0 && (
                         <div className="flex flex-wrap gap-1.5 mt-1.5">
-                          {exp.tags.map((tag, t) => (
+                          {exp.tags.map((tag) => (
                             <span
-                              key={t}
+                              key={tag}
                               className={`px-2 py-0.5 text-[10px] sm:text-xs font-medium rounded-full bg-gradient-to-r ${exp.color} text-white/90`}
                             >
                               {tag}
@@ -83,9 +84,9 @@ const Experience = () => {
                           className="overflow-hidden"
                         >
                           <ul className="mt-3 sm:mt-4 space-y-2 sm:space-y-3">
-                            {exp.points.map((point, j) => (
+                            {Children.toArray(exp.points).map((point, j) => (
                               <motion.li
-                                key={j}
+                                key={isValidElement(point) ? point.key : String(point)}
                                 initial={{ opacity: 0, x: -10 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: j * 0.1 }}
@@ -100,9 +101,9 @@ const Experience = () => {
                           {/* Links */}
                           {exp.links && exp.links.length > 0 && (
                             <div className="mt-3 sm:mt-4 flex flex-wrap gap-2">
-                              {exp.links.map((link, l) => (
+                              {exp.links.map((link) => (
                                 <a
-                                  key={l}
+                                  key={link.url}
                                   href={link.url}
                                   target="_blank"
                                   rel="noopener noreferrer"

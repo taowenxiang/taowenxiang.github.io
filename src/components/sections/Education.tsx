@@ -25,6 +25,7 @@ const Education = () => {
               Guangzhou, Guangdong, China
             </p>
             <p className="text-slate-500 text-sm mt-2">Since 2024.09</p>
+            <p className="text-blue-700 text-sm font-semibold mt-2">GPA: 3.86 / 4.3</p>
 
             <div className="mt-5 pt-5 border-t border-blue-200/50">
               <h4 className="text-sm font-semibold text-slate-800 mb-3">Selected Honors & Awards</h4>

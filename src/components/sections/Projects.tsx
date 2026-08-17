@@ -11,7 +11,7 @@ const Projects = () => {
 			className="relative px-4 py-16 sm:px-6 sm:py-24 md:py-32"
 		>
 			<div className="mx-auto max-w-5xl">
-				<SectionHeading icon={FolderKanban}>Projects</SectionHeading>
+				<SectionHeading icon={FolderKanban}>Research &amp; Systems</SectionHeading>
 
 				<div className="grid gap-4 sm:gap-6 md:grid-cols-2">
 					{projects.map((project, index) => (

@@ -69,10 +69,10 @@ const Hero = ({ typedText }: HeroProps) => {
           transition={{ delay: 1, duration: 0.6 }}
           className="text-slate-600 max-w-2xl mx-auto mb-5 sm:mb-6 leading-relaxed text-base sm:text-lg px-2"
         >
-          AI Engineering undergraduate and research interested in designing{' '}
-          <span className="text-blue-700 font-medium">AI-enabled HCI systems</span>, especially in{' '}
-          <span className="text-sky-600 font-medium">intent understanding</span> and AI-enabled community building.
-          Currently at <span className="text-cyan-600 font-medium">HKUST-GZ</span>.
+          Artificial Intelligence undergraduate at <span className="text-cyan-600 font-medium">HKUST(GZ)</span>,
+          interested in <span className="text-blue-700 font-medium">Human-AI Interaction</span>, Interactive
+          Intelligent Systems, and Multi-Agent Systems. I build and study AI systems that help people
+          understand information, resolve ambiguity, and collaborate.
         </motion.p>
 
         <motion.div
