@@ -54,7 +54,7 @@ export const projects: PortfolioProject[] = [
 		desc: "An HKUST(GZ) student learning and campus-life platform for course reviews, discussion, scheduling, campus information, events, team formation, and community programs.",
 		tags: ["Platform Engineering", "Product Development", "Community"],
 		badge: "Live platform",
-		evidence: "500+ registered users",
+		evidence: "1,300+ registered users",
 		image: "/projects/unikorn-course-graph.webp",
 		imageAlt:
 			"UniKorn Course Graph interface showing course nodes and prerequisite relationships",

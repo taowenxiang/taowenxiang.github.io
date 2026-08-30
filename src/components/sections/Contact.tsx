@@ -66,7 +66,7 @@ const Contact = () => {
           <RevealCard delay={0.3}>
             <div className="mt-2 sm:mt-4">
               <motion.a
-                href="/CV.pdf"
+                href="/CV_260830.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05, y: -2 }}

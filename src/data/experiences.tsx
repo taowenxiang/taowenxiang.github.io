@@ -149,7 +149,7 @@ export const experiences: Experience[] = [
       <span key="unikorn-platform">Co-built and operated a <B>student community platform</B> serving learning and campus life at HKUST(GZ).</span>,
       'Supported the development and operation of key features including forums, course reviews, schedule planning, and team formation.',
       'Helped organize student-facing public-service activities, including course-selection info sessions and Q&A support for new students.',
-      <span key="unikorn-users">Grew the platform to <B>500+ registered users</B> (to date).</span>,
+      <span key="unikorn-users">Grew the platform to <B>1,300+ registered users</B> (to date).</span>,
       <span key="unikorn-link">Visit our website <Link href="https://unikorn.axfff.com">https://unikorn.axfff.com</Link>.</span>,
     ],
     color: 'from-cyan-600 to-blue-700',
